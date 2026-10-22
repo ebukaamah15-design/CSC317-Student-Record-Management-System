@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Record Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Record Management System</h1>
+    <p>CSC 317 — System Analysis and Design Project</p>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Add a Student</h2>
+      <form id="student-form">
+        <label for="student-id">Matric Number</label>
+        <input id="student-id" required placeholder="e.g. CSC/2026/001">
+        <label for="student-name">Full Name</label>
+        <input id="student-name" required placeholder="Enter full name">
+        <label for="student-department">Department</label>
+        <input id="student-department" required placeholder="e.g. Computer Science">
+        <label for="student-level">Level</label>
+        <select id="student-level" required>
+          <option value="">Choose level</option>
+          <option>100</option><option>200</option><option>300</option>
+          <option>400</option><option>500</option>
+        </select>
+        <button type="submit">Save Student</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+    <section class="panel">
+      <h2>Student Records</h2>
+      <label for="search">Search by name or matric number</label>
+      <input id="search" placeholder="Type to search">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Matric Number</th><th>Full Name</th><th>Department</th><th>Level</th><th>Action</th></tr></thead>
+          <tbody id="student-list"></tbody>
+        </table>
+      </div>
+      <p id="empty-state">No student records yet. Add a student using the form.</p>
+    </section>
+    <p class="note">Demo project: records are saved in this browser on this device. Do not enter real private student information.</p>
+  </main>
+  <footer>Created for CSC 317 • Student Record Management System</footer>
+  <script src="script.js"></script>
+</body>
+</html>
